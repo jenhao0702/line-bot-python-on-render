@@ -3,7 +3,7 @@ services:
   name: line-bot-python-flask
   env: python
   repo: https://github.com/line/line-bot-sdk-python.git
-  buildCommand: cd examples/flask-echo;pip freeze > requirements.txt
+  buildCommand: cd examples/flask-echo;pip3 install psycopg2 gunicorn && pip3 freeze > requirements.txt
   startCommand: cd examples/flask-echo;gunicorn app:app
   plan: free
   autoDeploy: false
@@ -16,7 +16,7 @@ services:
 #   name: line-bot-python-flask-with-handler
 #   env: python
 #   repo: https://github.com/line/line-bot-sdk-python.git
-#   buildCommand: cd examples/flask-echo;pip freeze > requirements.txt
+#   buildCommand: cd examples/flask-echo;pip3 install psycopg2 gunicorn && pip3 freeze > requirements.txt
 #   startCommand: cd examples/flask-echo;gunicorn app_with_handler:app
 #   plan: free
 #   autoDeploy: false
@@ -29,7 +29,7 @@ services:
 #   name: line-bot-python-flask-kitchensink
 #   env: python
 #   repo: https://github.com/line/line-bot-sdk-python.git
-#   buildCommand: cd examples/flask-kitchensink;pip freeze > requirements.txt
+#   buildCommand: cd examples/flask-kitchensink;pip3 install psycopg2 gunicorn && pip3 freeze > requirements.txt
 #   startCommand: cd examples/flask-kitchensink;gunicorn app:app
 #   plan: free
 #   autoDeploy: false
@@ -42,7 +42,7 @@ services:
 #   name: line-bot-python-simple-server
 #   env: python
 #   repo: https://github.com/line/line-bot-sdk-python.git
-#   buildCommand: cd examples/simple-server-echo;pip freeze > requirements.txt
+#   buildCommand: cd examples/simple-server-echo;pip3 install psycopg2 gunicorn && pip3 freeze > requirements.txt
 #   startCommand: cd examples/simple-server-echo;python app.py
 #   plan: free
 #   autoDeploy: false
@@ -55,7 +55,7 @@ services:
 #   name: line-bot-python-aiohttp
 #   env: python
 #   repo: https://github.com/line/line-bot-sdk-python.git
-#   buildCommand: cd examples/aiohttp-echo;pip freeze > requirements.txt
+#   buildCommand: cd examples/aiohttp-echo;pip3 install psycopg2 gunicorn && pip3 freeze > requirements.txt
 #   startCommand: cd examples/aiohttp-echo;python app.py
 #   plan: free
 #   autoDeploy: false
